@@ -7,9 +7,12 @@ class RegModelForm(forms.ModelForm):
         fields = ["nombre","email"]
 
     def clean_email(self):
-        print self.cleaned_data
-        return "email@email.com"
+        email= self.cleaned_data.get("email")
+        if not "edu" in email:
+            raise forms.ValidationError("Utiliza un correo determinado")
+        return email
 
-class RegForm(forms.Form):
-    nombre = forms.CharField(max_length=100)
+class ContactForm(forms.Form):
+    nombre = forms.CharField()
     email= forms.EmailField()
+    mensaje=forms.CharField(widget=forms.Textarea)

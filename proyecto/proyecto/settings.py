@@ -26,6 +26,16 @@ SECRET_KEY = 'h^78a9iw#s6k&a+$fy-by0#tg85gkcu2c1^(d6=byiz+u=(pnk'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '' #borrar antes de subir a github
+EMAIL_HOST_PASSWORD = '' #borrar antes de subir a github
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+#***
+# Para usar gmail hay que desactivar el captcha
+# https://accounts.google.com/displayunlockcaptcha
+#***
 
 
 # Application definition
@@ -106,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'Europe/Istanbul' 
+TIME_ZONE = 'Europe/Istanbul'
 
 USE_I18N = True
 
