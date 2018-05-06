@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'odeclasonarres@gmail.com' #borrar antes de subir a github
-EMAIL_HOST_PASSWORD = 'reximperator' #borrar antes de subir a github
+EMAIL_HOST_USER = '' #borrar antes de subir a github
+EMAIL_HOST_PASSWORD = '' #borrar antes de subir a github
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
