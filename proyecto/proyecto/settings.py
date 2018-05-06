@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '' #borrar antes de subir a github
-EMAIL_HOST_PASSWORD = '' #borrar antes de subir a github
+EMAIL_HOST_USER = 'odeclasonarres@gmail.com' #borrar antes de subir a github
+EMAIL_HOST_PASSWORD = 'reximperator' #borrar antes de subir a github
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -41,12 +41,16 @@ EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = [
+#apps de Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+#apps de terceros
+    'crispy_forms',
+#mis apps
     'boletin',
 ]
 
@@ -61,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proyecto.urls'
+
+CRISPY_TEMPLATE_PACK='bootstrap3'
 
 TEMPLATES = [
     {
@@ -129,3 +135,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static_pro", "static"),
+    # '/var/www/static/',
+]
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_env", "static_root")
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_env", "media_root")

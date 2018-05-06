@@ -1,8 +1,14 @@
+{%extends "base.html"%}
+{%load crispy_forms_tags%}
 {{saludo}}
 <hr/>
-
-<form method="POST" action="">{%csrf_token%}
-  {{form.as_p}}
-
-  <input type='submit' value='Regístrame'/>
-</form>
+{%block content%}
+<div class="row">
+  <div class="col-sm-6">
+    <form method="POST" action="">{%csrf_token%}
+      {{form|crispy}}
+      <input class="btn-primary"type='submit' value='Regístrame'/>
+    </form>
+  </div>
+</div>
+{% endblock %}
