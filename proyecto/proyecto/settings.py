@@ -46,10 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 #apps de terceros
     'crispy_forms',
+    'registration',
 #mis apps
     'boletin',
 ]
@@ -67,6 +69,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'proyecto.urls'
 
 CRISPY_TEMPLATE_PACK='bootstrap3'
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+
 
 TEMPLATES = [
     {

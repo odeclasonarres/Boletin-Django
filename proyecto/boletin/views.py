@@ -38,6 +38,7 @@ def inicio(request):
     return render(request, "inicio.html", context)
 
 def contact(request):
+    titulo= "Contacta con nosotras"
     form= ContactForm(request.POST or None)
     if form.is_valid():
         # for key, value in form.cleaned_data.iteritems():
@@ -61,5 +62,6 @@ def contact(request):
         # print email, mensaje, nombre
     context={
         "form":form,
+        "titulo": titulo
     }
     return render(request, "forms.html", context)
